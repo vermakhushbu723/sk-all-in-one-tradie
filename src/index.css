@@ -2328,38 +2328,68 @@ h5 {
   font-size: 0.65rem;
 }
 
-.other-service {
+.other-grid {
   display: grid;
-  grid-template-columns: 180px 1fr auto;
-  gap: 24px;
-  align-items: center;
-  padding: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.other-card {
+  display: block;
+  height: 100%;
   border-radius: var(--radius);
+  overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  transition: transform 0.4s var(--ease), border-color 0.4s;
 }
 
-.other-service img {
+.other-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(247, 128, 30, 0.45);
+}
+
+.other-img {
+  position: relative;
+  aspect-ratio: 16 / 10;
+}
+
+.other-img img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 
-.other-service h3 {
-  font-size: 1.15rem;
+.other-icon {
+  position: absolute;
+  left: 16px;
+  bottom: -20px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--gradient);
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: var(--glow);
+}
+
+.other-body {
+  padding: 30px 18px 18px;
+}
+
+.other-body h4 {
+  font-size: 1rem;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-.other-service p {
+.other-body p {
   color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.other-service .eyebrow {
-  margin-bottom: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
 }
 
 /* Project detail */
@@ -3144,12 +3174,8 @@ h5 {
   .cta-actions {
     justify-content: center;
   }
-  .other-service {
-    grid-template-columns: 140px 1fr;
-  }
-  .other-service .btn {
-    grid-column: 1 / -1;
-    justify-self: start;
+  .other-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -3254,7 +3280,7 @@ h5 {
     margin-left: 0;
     width: 100%;
   }
-  .other-service {
+  .other-grid {
     grid-template-columns: 1fr;
   }
   .project-nav a span {
@@ -3317,4 +3343,9 @@ h5 {
   html {
     scroll-behavior: auto;
   }
+}
+
+.page-loading {
+  min-height: 100vh;
+  background: #111316;
 }

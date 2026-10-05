@@ -60,7 +60,7 @@ export default function ContactForm({ defaultService = '' }) {
           {services.map((s) => (
             <option key={s.slug}>{s.title}</option>
           ))}
-          <option>Tiling & Painting</option>
+          <option>Multiple Services</option>
         </select>
         <span>Select Service</span>
       </label>

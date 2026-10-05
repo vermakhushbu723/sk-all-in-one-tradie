@@ -17,8 +17,11 @@ import CtaBanner from '../components/sections/CtaBanner'
 import { projects } from '../data/projects'
 import { site } from '../data/site'
 
-const slides = ['/images/bathroom-dark.jpg', '/images/interior-living.jpg', '/images/kitchen-floor.jpg']
-const words = ['Wall Tiling', 'Floor Tiling', 'Painting']
+const slides = ['/images/bathroom-dark.jpg', '/images/interior-living.jpg', '/images/deck-finished.jpg', '/images/kitchen-floor.jpg']
+const words = ['Tiling', 'Painting', 'Carpentry', 'Plumbing']
+
+// One recent project from each service
+const featuredProjects = ['tiling', 'painting', 'carpentry', 'plumbing'].map((c) => projects.find((p) => p.category === c))
 
 const fadeUp = (delay) => ({
   initial: { opacity: 0, y: 30 },
@@ -58,7 +61,7 @@ function Hero() {
         <div className="hero-content">
           <motion.span className="hero-badge" {...fadeUp(0.1)}>
             <span className="pulse-dot" />
-            Trusted Tiling &amp; Painting Experts
+            Your Trusted All In One Tradie
           </motion.span>
 
           <motion.h1 {...fadeUp(0.2)}>
@@ -81,7 +84,7 @@ function Hero() {
           </motion.h1>
 
           <motion.p className="hero-text" {...fadeUp(0.3)}>
-            Precision wall &amp; floor tiling and premium painting for homes and businesses. Honest pricing, clean
+            Tiling, painting, carpentry and plumbing for homes and businesses. Honest pricing, clean
             worksites and a finish you will love.
           </motion.p>
 
@@ -163,10 +166,10 @@ function AboutIntro() {
             eyebrow="About Us"
             title="Your Local"
             highlight="All In One Tradie"
-            text="SK All In One Tradie is an owner operated business specialising in wall & floor tiling and painting. We treat every home like our own and take pride in finishing every job to the highest standard."
+            text="SK All In One Tradie is an owner operated business covering wall & floor tiling, painting & decorating, carpentry and plumbing. We treat every home like our own and take pride in finishing every job to the highest standard."
           />
           <Reveal className="check-list" delay={0.1}>
-            {['Tiling and painting under one roof', 'Fixed quotes with no hidden costs', 'Owner on site for every project', 'Premium materials and tools'].map((t) => (
+            {['Four trades under one roof', 'Fixed quotes with no hidden costs', 'Owner on site for every project', 'Premium materials and tools'].map((t) => (
               <span key={t}><FaCircleCheck /> {t}</span>
             ))}
           </Reveal>
@@ -193,7 +196,7 @@ export default function Home() {
             eyebrow="What We Do"
             title="Our Expert"
             highlight="Services"
-            text="Two specialised trades, one dependable team. From the first tile to the final coat of paint."
+            text="Four specialised trades, one dependable team. From tiles and paint to timber and taps."
           />
           <ServicesGrid />
         </div>
@@ -214,7 +217,7 @@ export default function Home() {
             </Reveal>
           </div>
           <div className="projects-grid">
-            {projects.slice(0, 4).map((p, i) => (
+            {featuredProjects.map((p, i) => (
               <ProjectCard key={p.slug} p={p} i={i} />
             ))}
           </div>

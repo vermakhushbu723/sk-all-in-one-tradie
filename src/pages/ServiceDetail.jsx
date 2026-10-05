@@ -168,23 +168,33 @@ export default function ServiceDetail() {
 
       <FaqAccordion faqs={s.faqs} image={s.gallery[0]} />
 
-      {others.map((o) => (
-        <section key={o.slug} className="section-tight section-light">
-          <div className="container">
-            <Reveal className="other-service">
-              <img src={o.image} alt={o.title} loading="lazy" />
-              <div>
-                <span className="eyebrow"><span className="eyebrow-line" />Also Available</span>
-                <h3>{o.title}</h3>
-                <p>{o.excerpt}</p>
-              </div>
-              <Link to={`/services/${o.slug}`} className="btn btn-primary">
-                Learn More <FaArrowRight className="btn-arrow" />
-              </Link>
-            </Reveal>
+      <section className="section section-light">
+        <div className="container">
+          <SectionHeading eyebrow="Also Available" title="Our Other" highlight="Services" />
+          <div className="other-grid">
+            {others.map((o, i) => {
+              const Icon = o.icon
+              return (
+                <Reveal key={o.slug} delay={i * 0.1}>
+                  <Link to={`/services/${o.slug}`} className="other-card">
+                    <div className="other-img">
+                      <img src={o.image} alt={o.title} loading="lazy" />
+                      <span className="other-icon"><Icon /></span>
+                    </div>
+                    <div className="other-body">
+                      <h4>{o.title}</h4>
+                      <p>{o.excerpt}</p>
+                      <span className="card-link">
+                        Learn More <FaArrowRight />
+                      </span>
+                    </div>
+                  </Link>
+                </Reveal>
+              )
+            })}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       <CtaBanner title={`Ready For ${s.title}?`} />
     </>

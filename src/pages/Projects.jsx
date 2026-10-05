@@ -19,7 +19,7 @@ export default function Projects() {
     <>
       <PageHeader
         title="Our Projects"
-        text="A look at some of the tiling and painting work we are proud of."
+        text="A look at some of the tiling, painting, carpentry and plumbing work we are proud of."
         image="/images/bathroom-green.jpg"
         crumbs={[{ label: 'Projects' }]}
       />
@@ -45,7 +45,7 @@ export default function Projects() {
             </div>
           </LayoutGroup>
 
-          <motion.div layout className="projects-grid">
+          <motion.div layout className="projects-grid three">
             <AnimatePresence mode="popLayout">
               {list.map((p, i) => (
                 <ProjectCard key={p.slug} p={p} i={i} />

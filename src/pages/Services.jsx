@@ -22,7 +22,7 @@ export default function Services() {
     <>
       <PageHeader
         title="Our Services"
-        text="Expert wall & floor tiling and professional painting, delivered by one trusted team."
+        text="Tiling, painting & decorating, carpentry and plumbing, delivered by one trusted team."
         image="/images/floor-marble.jpg"
         crumbs={[{ label: 'Services' }]}
       />
@@ -31,7 +31,7 @@ export default function Services() {
         <div className="container">
           <SectionHeading
             eyebrow="What We Offer"
-            title="Two Trades,"
+            title="Four Trades,"
             highlight="One Standard"
             text="Whether you are renovating a bathroom or refreshing the whole house, we handle it from start to finish."
           />

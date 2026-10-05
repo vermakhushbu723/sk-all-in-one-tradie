@@ -17,7 +17,7 @@ export default function Footer() {
               <strong>SK</strong> All In One <em>Tradie</em>
             </span>
           </Link>
-          <p>Trusted local experts in wall &amp; floor tiling and painting. Quality craftsmanship on every job.</p>
+          <p>Trusted local experts in tiling, painting, carpentry and plumbing. Quality craftsmanship on every job.</p>
           <div className="socials">
             <a href={site.socials.facebook} aria-label="Facebook"><FaFacebookF /></a>
             <a href={site.socials.instagram} aria-label="Instagram"><FaInstagram /></a>

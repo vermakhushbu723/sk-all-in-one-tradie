@@ -1,7 +1,7 @@
 // Update these details with the real business information
 export const site = {
   name: 'SK All In One Tradie',
-  tagline: 'Wall & Floor Tiling | Painting',
+  tagline: 'Tiling | Painting | Carpentry | Plumbing',
   phone: '+61 400 000 000',
   phoneHref: 'tel:+61400000000',
   whatsapp: '61400000000',

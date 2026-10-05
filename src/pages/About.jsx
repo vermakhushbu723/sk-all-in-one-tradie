@@ -13,8 +13,9 @@ import { values } from '../data/content'
 const skills = [
   { label: 'Wall Tiling', value: 98 },
   { label: 'Floor Tiling', value: 97 },
-  { label: 'Interior Painting', value: 96 },
-  { label: 'Exterior Painting', value: 94 },
+  { label: 'Painting & Decorating', value: 96 },
+  { label: 'Carpentry', value: 95 },
+  { label: 'Plumbing', value: 94 },
 ]
 
 export default function About() {
@@ -45,11 +46,11 @@ export default function About() {
               eyebrow="Our Story"
               title="Crafting Better Homes"
               highlight="Since Day One"
-              text="SK All In One Tradie started with a simple idea: homeowners deserve one reliable tradie who can tile and paint to a high standard, turn up on time and leave the place spotless."
+              text="SK All In One Tradie started with a simple idea: homeowners deserve one reliable tradie who can tile, paint, build and plumb to a high standard, turn up on time and leave the place spotless."
             />
             <Reveal delay={0.1}>
               <p className="body-text">
-                Over the past decade we have tiled hundreds of bathrooms, kitchens and floors and painted homes inside
+                Over the past decade we have tiled hundreds of bathrooms and floors, built decks and cabinets, fixed countless taps and painted homes inside
                 and out across the city. Today we are still owner operated, so the person who quotes your job is the
                 person who makes sure it is done right.
               </p>

@@ -5,7 +5,7 @@ import { site } from '../../data/site'
 
 export default function CtaBanner({
   title = 'Ready To Transform Your Space?',
-  text = 'Get a free, no obligation quote for tiling or painting today.',
+  text = 'Get a free, no obligation quote for tiling, painting, carpentry or plumbing.',
 }) {
   return (
     <section className="cta-section">

@@ -27,7 +27,7 @@ export const features = [
   { icon: FaClock, title: 'On Time, Every Time', desc: 'We respect your schedule and finish as promised.' },
   { icon: FaTags, title: 'Upfront Pricing', desc: 'Clear fixed quotes with no hidden extras.' },
   { icon: FaBroom, title: 'Clean Worksite', desc: 'We leave your home tidy at the end of each day.' },
-  { icon: FaHandshake, title: 'One Trusted Team', desc: 'Tiling and painting handled by one tradie.' },
+  { icon: FaHandshake, title: 'One Trusted Team', desc: 'Four trades handled by one trusted team.' },
 ]
 
 export const steps = [
@@ -41,7 +41,7 @@ export const values = [
   {
     icon: FaBullseye,
     title: 'Our Mission',
-    desc: 'To deliver tiling and painting that looks great on day one and still looks great ten years later.',
+    desc: 'To deliver tiling, painting, carpentry and plumbing that looks great on day one and still looks great ten years later.',
   },
   {
     icon: FaEye,
@@ -92,12 +92,12 @@ export const faqs = [
     a: 'We service homes and businesses across the city and surrounding suburbs. Contact us to confirm your area.',
   },
   {
-    q: 'Can you do tiling and painting in the same project?',
-    a: 'Absolutely. That is what we do best. One team handles both, so your renovation runs smoothly with one point of contact.',
+    q: 'Can you handle tiling, painting, carpentry and plumbing in one project?',
+    a: 'Absolutely. That is what we do best. One team handles it all, so your renovation runs smoothly with one point of contact.',
   },
   {
     q: 'Do you offer a warranty?',
-    a: 'Yes. All our tiling and painting work is backed by a written workmanship warranty.',
+    a: 'Yes. All our work is backed by a written workmanship warranty.',
   },
 ]
 
@@ -109,5 +109,8 @@ export const marqueeItems = [
   'Bathrooms',
   'Kitchen Splashbacks',
   'Feature Walls',
-  'Outdoor Areas',
+  'Carpentry',
+  'Decks & Doors',
+  'Plumbing',
+  'Taps & Hot Water',
 ]

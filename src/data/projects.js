@@ -1,0 +1,122 @@
+export const projects = [
+  {
+    slug: 'modern-bathroom-renovation',
+    title: 'Modern Bathroom Renovation',
+    category: 'tiling',
+    location: 'Parramatta',
+    duration: '5 days',
+    year: '2026',
+    cover: '/images/bathroom-tub.jpg',
+    images: ['/images/bathroom-tub.jpg', '/images/shower-marble.jpg', '/images/tile-mosaic-dark.jpg'],
+    summary: 'Full wall and floor tiling with large format porcelain and a freestanding bath.',
+    description:
+      'The client wanted a calm, spa style bathroom. We removed the old tiles, waterproofed the wet areas and laid large format charcoal porcelain on the floor with matching wall tiles to create a seamless, modern look.',
+    scope: ['Old tile removal', 'Floor levelling', 'Large format floor tiles', 'Full height wall tiling', 'Silicone sealing'],
+  },
+  {
+    slug: 'kitchen-floor-and-splashback',
+    title: 'Kitchen Floor & Splashback',
+    category: 'tiling',
+    location: 'Castle Hill',
+    duration: '4 days',
+    year: '2026',
+    cover: '/images/kitchen-floor.jpg',
+    images: ['/images/kitchen-floor.jpg', '/images/splashback.jpg', '/images/kitchen-island.jpg'],
+    summary: 'Dark porcelain floor tiles through an open plan kitchen with a white subway splashback.',
+    description:
+      'An open plan kitchen refresh with 600 x 600 porcelain floor tiles laid in a straight lay, paired with a classic white subway splashback finished with crisp grey grout.',
+    scope: ['Porcelain floor tiling', 'Subway tile splashback', 'Grout colour matching', 'Edge trims & sealing'],
+  },
+  {
+    slug: 'feature-shower-wall',
+    title: 'Stone Look Shower Wall',
+    category: 'tiling',
+    location: 'Blacktown',
+    duration: '3 days',
+    year: '2025',
+    cover: '/images/shower-stone.jpg',
+    images: ['/images/shower-stone.jpg', '/images/bathroom-green.jpg', '/images/tiles-grey.jpg'],
+    summary: 'Natural stone look wall tiles in a walk in shower with a built in niche.',
+    description:
+      'We tiled a walk in shower using natural stone look porcelain with a recessed niche and a mitred corner finish, giving the space a premium feel without the upkeep of real stone.',
+    scope: ['Shower wall tiling', 'Recessed niche', 'Mitred corners', 'Floor waste setout'],
+  },
+  {
+    slug: 'hallway-floor-tiling',
+    title: 'Hallway & Entry Floors',
+    category: 'tiling',
+    location: 'Penrith',
+    duration: '3 days',
+    year: '2025',
+    cover: '/images/floor-white-room.jpg',
+    images: ['/images/floor-white-room.jpg', '/images/floor-marble.jpg', '/images/level-work.jpg'],
+    summary: 'Light marble look floor tiles through the entry, hallway and living areas.',
+    description:
+      'A bright, durable floor through the high traffic areas of the home. The floor was levelled before laying marble look porcelain with tight 2 mm grout joints.',
+    scope: ['Floor preparation', 'Self levelling', 'Marble look porcelain', 'Skirting finishing'],
+  },
+  {
+    slug: 'living-room-interior-repaint',
+    title: 'Living Room Interior Repaint',
+    category: 'painting',
+    location: 'Ryde',
+    duration: '2 days',
+    year: '2026',
+    cover: '/images/interior-blue.jpg',
+    images: ['/images/interior-blue.jpg', '/images/interior-living.jpg', '/images/interior-white.jpg'],
+    summary: 'A bold navy feature wall with fresh white ceilings and trims.',
+    description:
+      'The client wanted a statement living room. We patched and sanded the walls, then painted a deep navy feature wall paired with crisp white ceilings, doors and skirting.',
+    scope: ['Patch & sand', 'Feature wall', 'Ceiling painting', 'Doors & trims'],
+  },
+  {
+    slug: 'full-house-exterior-painting',
+    title: 'Full House Exterior Painting',
+    category: 'painting',
+    location: 'Hornsby',
+    duration: '6 days',
+    year: '2025',
+    cover: '/images/exterior-colour.jpg',
+    images: ['/images/exterior-colour.jpg', '/images/exterior-green.jpg', '/images/house-exterior.jpg'],
+    summary: 'Weatherboard exterior repaint with vibrant colours and fresh trims.',
+    description:
+      'This weatherboard home needed protection from the weather and a colour refresh. We pressure washed, scraped and primed before applying two coats of premium exterior acrylic.',
+    scope: ['Pressure washing', 'Scraping & priming', 'Two coat exterior system', 'Eaves & fascia'],
+  },
+  {
+    slug: 'new-home-interior-painting',
+    title: 'New Home Interior Painting',
+    category: 'painting',
+    location: 'Liverpool',
+    duration: '7 days',
+    year: '2026',
+    cover: '/images/fresh-room.jpg',
+    images: ['/images/fresh-room.jpg', '/images/interior-lounge.jpg', '/images/painter-2.jpg'],
+    summary: 'Complete interior painting of a newly renovated home, ready to move in.',
+    description:
+      'Every wall, ceiling and door in a freshly renovated home. We sealed new plaster, sanded between coats and finished with a soft neutral palette throughout.',
+    scope: ['Plaster sealing', 'Walls & ceilings', 'Doors & frames', 'Final touch ups'],
+  },
+  {
+    slug: 'heritage-facade-repaint',
+    title: 'Heritage Facade Repaint',
+    category: 'painting',
+    location: 'Strathfield',
+    duration: '5 days',
+    year: '2025',
+    cover: '/images/exterior-yellow.jpg',
+    images: ['/images/exterior-yellow.jpg', '/images/house-exterior.jpg', '/images/brushes.jpg'],
+    summary: 'Warm toned facade repaint with detailed window frames.',
+    description:
+      'A warm, inviting facade colour with carefully cut in window frames. Cracks were repaired and the render was primed for a long lasting finish.',
+    scope: ['Render crack repair', 'Primer coat', 'Facade painting', 'Window frames'],
+  },
+]
+
+export const projectFilters = [
+  { key: 'all', label: 'All Projects' },
+  { key: 'tiling', label: 'Wall & Floor Tiling' },
+  { key: 'painting', label: 'Painting' },
+]
+
+export const getProject = (slug) => projects.find((p) => p.slug === slug)

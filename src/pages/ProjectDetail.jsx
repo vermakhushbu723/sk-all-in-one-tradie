@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import {
   FaArrowLeft,
   FaArrowRight,
-  FaLocationDot,
   FaClock,
   FaCalendar,
   FaLayerGroup,
@@ -53,7 +52,6 @@ function ProjectDetail({ slug }) {
 
   const info = [
     { icon: FaLayerGroup, label: 'Service', value: service.title },
-    { icon: FaLocationDot, label: 'Location', value: p.location },
     { icon: FaClock, label: 'Duration', value: p.duration },
     { icon: FaCalendar, label: 'Completed', value: p.year },
   ]

@@ -7,9 +7,7 @@ export const site = {
   whatsapp: '61400000000',
   whatsappText: 'Hi SK All In One Tradie, I would like a quote for',
   email: 'info@skallinonetradie.com',
-  address: 'Servicing all suburbs across your city',
   hours: 'Mon - Sat : 7:00 AM - 6:00 PM',
-  mapQuery: 'Sydney NSW',
   socials: {
     facebook: '#',
     instagram: '#',

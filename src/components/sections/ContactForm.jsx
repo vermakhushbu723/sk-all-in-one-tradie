@@ -4,7 +4,7 @@ import { FaPaperPlane, FaCircleCheck } from 'react-icons/fa6'
 import { services } from '../../data/services'
 import { whatsappLink } from '../../data/site'
 
-const empty = { name: '', phone: '', email: '', service: '', suburb: '', message: '' }
+const empty = { name: '', phone: '', email: '', service: '', message: '' }
 
 // No backend yet: the enquiry is sent to the business WhatsApp with all details prefilled.
 export default function ContactForm({ defaultService = '' }) {
@@ -21,7 +21,6 @@ export default function ContactForm({ defaultService = '' }) {
       `Phone: ${form.phone}`,
       form.email && `Email: ${form.email}`,
       `Service: ${form.service}`,
-      form.suburb && `Suburb: ${form.suburb}`,
       `Details: ${form.message}`,
     ]
       .filter(Boolean)
@@ -50,20 +49,16 @@ export default function ContactForm({ defaultService = '' }) {
           <span>Email Address</span>
         </label>
         <label className="field">
-          <input name="suburb" value={form.suburb} onChange={update} placeholder=" " />
-          <span>Suburb</span>
+          <select name="service" value={form.service} onChange={update} required>
+            <option value="" disabled hidden />
+            {services.map((s) => (
+              <option key={s.slug}>{s.title}</option>
+            ))}
+            <option>Multiple Services</option>
+          </select>
+          <span>Select Service</span>
         </label>
       </div>
-      <label className="field">
-        <select name="service" value={form.service} onChange={update} required>
-          <option value="" disabled hidden />
-          {services.map((s) => (
-            <option key={s.slug}>{s.title}</option>
-          ))}
-          <option>Multiple Services</option>
-        </select>
-        <span>Select Service</span>
-      </label>
       <label className="field">
         <textarea name="message" rows="4" value={form.message} onChange={update} placeholder=" " required />
         <span>Tell us about your project</span>

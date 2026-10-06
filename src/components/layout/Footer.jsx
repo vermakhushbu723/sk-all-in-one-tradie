@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope, FaLocationDot } from 'react-icons/fa6'
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa6'
 import logo from '../../assets/logo-mark.webp'
 import { navLinks, site, whatsappLink } from '../../data/site'
 import { services } from '../../data/services'
@@ -49,7 +49,7 @@ export default function Footer() {
           <ul className="footer-contact">
             <li><FaPhone /> <a href={site.phoneHref}>{site.phone}</a></li>
             <li><FaEnvelope /> <a href={`mailto:${site.email}`}>{site.email}</a></li>
-            <li><FaLocationDot /> {site.address}</li>
+            <li><FaWhatsapp /> <a href={whatsappLink()} target="_blank" rel="noreferrer">Chat on WhatsApp</a></li>
           </ul>
         </div>
       </div>

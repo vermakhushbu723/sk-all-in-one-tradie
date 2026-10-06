@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FaArrowRight, FaLocationDot } from 'react-icons/fa6'
+import { FaArrowRight } from 'react-icons/fa6'
 import { services } from '../../data/services'
 
 const categoryLabel = (cat) => services.find((s) => s.category === cat)?.title
@@ -26,7 +26,7 @@ export default function ProjectCard({ p, i = 0 }) {
         <div className="project-info">
           <h4>{p.title}</h4>
           <span>
-            <FaLocationDot /> {p.location}
+            View Project <FaArrowRight />
           </span>
         </div>
       </Link>

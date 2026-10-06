@@ -88,8 +88,8 @@ export const faqs = [
     a: 'Yes. We are fully licensed and carry public liability insurance for every job we take on.',
   },
   {
-    q: 'Which areas do you service?',
-    a: 'We service homes and businesses across the city and surrounding suburbs. Contact us to confirm your area.',
+    q: 'How soon can you start?',
+    a: 'Most jobs can be booked within one to two weeks, and urgent repairs like leaks are often handled the same day.',
   },
   {
     q: 'Can you handle tiling, painting, carpentry and plumbing in one project?',

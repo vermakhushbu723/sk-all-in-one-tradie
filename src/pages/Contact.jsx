@@ -1,17 +1,16 @@
 import { useSearchParams } from 'react-router-dom'
-import { FaPhone, FaEnvelope, FaLocationDot, FaClock, FaWhatsapp } from 'react-icons/fa6'
+import { FaPhone, FaEnvelope, FaClock, FaWhatsapp, FaCircleCheck } from 'react-icons/fa6'
 import PageHeader from '../components/ui/PageHeader'
 import SectionHeading from '../components/ui/SectionHeading'
 import Reveal from '../components/ui/Reveal'
 import ContactForm from '../components/sections/ContactForm'
 import FaqAccordion from '../components/sections/FaqAccordion'
 import { site, whatsappLink } from '../data/site'
-import { getService } from '../data/services'
+import { getService, services } from '../data/services'
 
 const info = [
   { icon: FaPhone, label: 'Call Us', value: site.phone, href: site.phoneHref },
   { icon: FaEnvelope, label: 'Email Us', value: site.email, href: `mailto:${site.email}` },
-  { icon: FaLocationDot, label: 'Service Area', value: site.address },
   { icon: FaClock, label: 'Working Hours', value: site.hours },
 ]
 
@@ -36,8 +35,10 @@ export default function Contact() {
               const body = (
                 <>
                   <span className="info-icon"><Icon /></span>
-                  <small>{c.label}</small>
-                  <strong>{c.value}</strong>
+                  <div>
+                    <small>{c.label}</small>
+                    <strong>{c.value}</strong>
+                  </div>
                 </>
               )
               return (
@@ -59,13 +60,16 @@ export default function Contact() {
             </Reveal>
 
             <Reveal className="contact-side" x={40} y={0}>
-              <div className="map-box">
-                <iframe
-                  title="Service area map"
-                  src={`https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&output=embed`}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+              <div className="contact-visual">
+                <img src="/images/consult.jpg" alt="Tradie arriving for a free quote" loading="lazy" />
+                <div className="contact-visual-card">
+                  <strong>One call, four trades</strong>
+                  <ul>
+                    {services.map((s) => (
+                      <li key={s.slug}><FaCircleCheck /> {s.title}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
               <div className="wa-card">
                 <span className="wa-card-icon"><FaWhatsapp /></span>

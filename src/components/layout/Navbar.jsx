@@ -5,6 +5,7 @@ import { FaBars, FaXmark, FaChevronDown, FaArrowRight } from 'react-icons/fa6'
 import logo from '../../assets/logo-mark.webp'
 import { navLinks } from '../../data/site'
 import { services } from '../../data/services'
+import SocialLinks from '../ui/SocialLinks'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -131,6 +132,7 @@ export default function Navbar() {
             <Link to="/contact" className="btn btn-primary" onClick={close}>
               Get Free Quote <FaArrowRight />
             </Link>
+            <SocialLinks className="mobile-socials" />
           </motion.nav>
         )}
       </AnimatePresence>

@@ -2992,6 +2992,33 @@ h5 {
   transition: all 0.35s var(--ease);
 }
 
+.follow-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.follow-card strong {
+  display: block;
+}
+
+.follow-card span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.mobile-socials {
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .socials a:hover {
   background: var(--gradient);
   border-color: transparent;

@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa6'
+import { FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa6'
 import logo from '../../assets/logo-mark.webp'
 import { navLinks, site, whatsappLink } from '../../data/site'
 import { services } from '../../data/services'
+import SocialLinks from '../ui/SocialLinks'
 
 const year = new Date().getFullYear()
 
@@ -18,11 +19,7 @@ export default function Footer() {
             </span>
           </Link>
           <p>Trusted local experts in tiling, painting, carpentry and plumbing. Quality craftsmanship on every job.</p>
-          <div className="socials">
-            <a href={site.socials.facebook} aria-label="Facebook"><FaFacebookF /></a>
-            <a href={site.socials.instagram} aria-label="Instagram"><FaInstagram /></a>
-            <a href={whatsappLink()} target="_blank" rel="noreferrer" aria-label="WhatsApp"><FaWhatsapp /></a>
-          </div>
+          <SocialLinks />
         </div>
 
         <div>

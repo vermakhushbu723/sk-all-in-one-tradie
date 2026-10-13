@@ -5,6 +5,7 @@ import SectionHeading from '../components/ui/SectionHeading'
 import Reveal from '../components/ui/Reveal'
 import ContactForm from '../components/sections/ContactForm'
 import FaqAccordion from '../components/sections/FaqAccordion'
+import SocialLinks from '../components/ui/SocialLinks'
 import { site, whatsappLink } from '../data/site'
 import { getService, services } from '../data/services'
 
@@ -80,6 +81,13 @@ export default function Contact() {
                 <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn-wa btn-sm">
                   Chat Now
                 </a>
+              </div>
+              <div className="follow-card">
+                <div>
+                  <strong>Follow Us</strong>
+                  <span>See our latest projects on Facebook &amp; Instagram.</span>
+                </div>
+                <SocialLinks />
               </div>
             </Reveal>
           </div>

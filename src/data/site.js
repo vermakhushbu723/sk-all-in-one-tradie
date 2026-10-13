@@ -1,16 +1,16 @@
-// Update these details with the real business information
+// Business contact details used across the whole site
 export const site = {
   name: 'SK All In One Tradie',
   tagline: 'Tiling | Painting | Carpentry | Plumbing',
-  phone: '+61 400 000 000',
-  phoneHref: 'tel:+61400000000',
-  whatsapp: '61400000000',
+  phone: '+61 452 122 060',
+  phoneHref: 'tel:+61452122060',
+  whatsapp: '61452122060',
   whatsappText: 'Hi SK All In One Tradie, I would like a quote for',
-  email: 'info@skallinonetradie.com',
+  email: 'skallinonetradie@gmail.com',
   hours: 'Mon - Sat : 7:00 AM - 6:00 PM',
   socials: {
-    facebook: '#',
-    instagram: '#',
+    facebook: 'https://www.facebook.com/profile.php?id=61595091791073',
+    instagram: 'https://www.instagram.com/skallinonetradie/',
   },
 }
 
